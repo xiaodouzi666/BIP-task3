@@ -1,20 +1,23 @@
 # BIP-task3
+task3 for the deep learning in forestry.
 
-# How to use the processed_data
-Make sure you follow these code hint:
-'''python
-TRAIN_IMAGES = "train_60m_images.npy"
-TRAIN_LABELS = "train_60m_labels.npy"
+TreeSatAI Benchmark Archive for Deep Learning in Forest Applications
 
-VAL_IMAGES   = "val_60m_images.npy"
-VAL_LABELS   = "val_60m_labels.npy"
+Dataset
 
-TEST_IMAGES  = "test_60m_images.npy"
-TEST_LABELS  = "test_60m_labels.npy"
+200m patches 60m patches
 
-BATCH_SIZE = 64
-LR         = 1e-3
-NUM_EPOCHS = 10
-DEVICE     = "cuda" if torch.cuda.is_available() else "cpu"
-'''
-You can modify it as you like!
+GeoTIFF naming convention: genus_species_ageclass_sampleID_dataset_source.tif
+e.g.: Fagus_sylvatica_1_6647_WEFL_NLF.tif
+
+https://owncloud.gwdg.de/index.php/s/aOfOKOnuq4S7WpU
+TreeSatAI_Sentinel-2_Tree-Species.zip
+
+▪ Folder “s2” contains 50,381 Sentinel-2 imagery patches derived from summertime
+mosaics of the years 2015 to 2020. Patches are available in 60 x 60 m (6 x 6 pixels) and
+200 x 200 m (20 x 20 pixels). Band order is B02, B03, B04, B08, B05, B06, B07, B8A, B11,
+B12, B01, and B09. Spatial resolution is 10 m.
+▪ 20 species classes (single labels)
+▪ 12 age classes (single labels)
+▪ 15 genus classes (multi labels)
+▪ fixed split for train “train_filenames.lst” (90%) and test “test_filesnames.lst“ (10%) data
