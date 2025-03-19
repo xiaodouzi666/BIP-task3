@@ -16,5 +16,5 @@ BATCH_SIZE = 64
 LR         = 1e-3
 NUM_EPOCHS = 10
 DEVICE     = "cuda" if torch.cuda.is_available() else "cpu"
-
+```
 You can modify it as you like!
